@@ -8,7 +8,6 @@
     <div id="app">
         @include('includes.navbar')
         @yield('content')
-        @include('includes.footer')
     </div>
 </body>
 </html>

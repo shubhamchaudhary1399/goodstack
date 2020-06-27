@@ -3,8 +3,8 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ url('/') }}">
             <i class="material-icons md-36" style="color: #e74e4b;">home</i>
-            <span class="mt-aside">{{ config('app.name', 'LiveSpace') }}</span>
-            
+            <span class="mt-aside">{{ config('app.name', 'goodstack') }}</span>
+
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}" style="outline: none;">
                 <span class="navbar-toggler-icon"></span>
@@ -13,25 +13,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
 
-        <form style="width:70%;" class="form-inline my-2 my-lg-0 form-row" id="nav_search_id" action="/search" method="post" role="search">
-            @csrf
-            <ul class="navbar-nav w-100">
-                <li class="text-center w-100">
-                    <div class="w-100" id="nav-search-box">
-                        <input id="nav-search-input" type="search" name="q" placeholder="Search PG name" aria-label="Search">
-                        <button id="nav-search-btn" type="submit">
-                            <span class="material-icons" id="scope-search">search</span>
-                        </button>
-                    </div>
-                </li>
-            </ul>
-        </form>
+
                     <!-- Right Side Of Navbar -->
         <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
 
             <li class="nav-item">
-                    
+
             </li>
 
                 @guest
@@ -78,7 +66,7 @@
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                             <i class="material-icons">exit_to_app</i>
-                            <span class="mt-aside">{{ __('Logout') }}</span>  
+                            <span class="mt-aside">{{ __('Logout') }}</span>
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
