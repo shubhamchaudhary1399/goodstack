@@ -43,8 +43,8 @@ class UserController extends Controller
         Log::info("otp = ".$otp);
         $user = User::where('email','=',$request->email)->update(['otp' => $otp]);
         // send otp to email using email api
-        $to_name = 'Shubham';
-        $to_email = 'shubhamluck998@gmail.com';
+        $to_name = 'User';
+        $to_email = $request->email;
         $data = array('name'=>"Dear user", "body" => "Thanks for using goodstack otp service for login. Your OTP is: ".$otp.". Never share OTP with anyone.");
 
         Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
