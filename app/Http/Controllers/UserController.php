@@ -50,7 +50,7 @@ class UserController extends Controller
         Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
     $message->to($to_email, $to_name)
             ->subject('Artisans Web Testing Mail');
-            $message->from('shubhamchaudhary1399@gmail.com','Artisans Web');
+            $message->from('pankaj.pk120@gmail.com','Artisans Web');
 });
         return response()->json([$user],200);
     }
