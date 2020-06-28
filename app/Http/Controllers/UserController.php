@@ -39,7 +39,6 @@ class UserController extends Controller
     }
 
     public function sendOtp(Request $request){
-
         $otp = rand(1000,9999);
         Log::info("otp = ".$otp);
         $user = User::where('email','=',$request->email)->update(['otp' => $otp]);
@@ -51,7 +50,7 @@ class UserController extends Controller
         Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
     $message->to($to_email, $to_name)
             ->subject('Artisans Web Testing Mail');
-    $message->from('pankaj.pk120@gmail.com','Artisans Web');
+    $message->from('team@bekaim.com','Artisans Web');
 });
         return response()->json([$user],200);
     }
