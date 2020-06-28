@@ -20,3 +20,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('login', 'UserController@login')->name('newlogin');
+
+Route::post('loginWithOtp', 'UserController@loginWithOtp')->name('loginWithOtp');
+Route::get('loginWithOtp', function () {
+    return view('auth/OtpLogin');
+})->name('loginWithOtp');
+
+Route::any('sendOtp', 'UserController@sendOtp');

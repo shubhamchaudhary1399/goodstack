@@ -2,6 +2,7 @@
 @section('header')
 <link rel="stylesheet" type="text/css" href="/css/login.css">
 @endsection
+@section('title', 'Dashboard | goodstack')
 @section('content')
 <div class="container py-4">
     <div class="row justify-content-center">

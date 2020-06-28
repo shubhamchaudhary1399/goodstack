@@ -59,11 +59,9 @@
 
                             <div class="form-group row">
                                 <div class="col-md-8">
-                                    @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
+                                        <a class="btn btn-link" href="/loginWithOtp">
+                                        {{ __('Login With OTP') }}
                                         </a>
-                                    @endif
                                 </div>
                                 <div class="col-md-4">
                                     <button type="submit" class=" btn btn-default my-btn float-right">
