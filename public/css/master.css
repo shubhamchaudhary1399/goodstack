@@ -47,29 +47,8 @@ input:focus, input:active, textarea:focus, textarea:active, select:focus, select
 	min-height: 64px;
 }
 
-#price-info{
-	font-family: 'Poppins', sans-serif;
-	background: linear-gradient(to right, #fb8133, #e74e4b);
-	color: white;
-}
-
-.final-price{
-	font-size: 21px;
-    font-weight: 500;
-    margin-bottom: 0px;
-    color:white;
-}
-
-.old-price{
-	text-decoration: line-through;
-	font-size: 18px;
-	padding-left: 10px;
-	font-weight: 300;
-    color: white;
-}
-
-.discount{
-	padding-left: 10px;
-	font-weight: 500;
-	font-size: 18px;
+table td {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
 }

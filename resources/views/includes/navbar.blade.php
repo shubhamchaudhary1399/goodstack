@@ -40,14 +40,14 @@
                 @else
                 <li class="nav-item">
                     <div class="btn-group dropleft">
-                        <img id="navbarDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre src="/uploads/{{ Auth::user()->userImg }}" class="img-fluid rounded-circle" style="max-height: 40px;">
+                        <img id="navbarDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre src='img/profile_image.png' class="img-fluid rounded-circle" style="max-height: 40px;">
 
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a  style="min-width:250px;" href='/user/profile' class="dropdown-item custom-head">
+                        <a  style="min-width:250px;" href='/home' class="dropdown-item custom-head">
 
-                            <img style='max-height:45px;margin-right:10px;' class='img-fluid rounded-circle' src='/uploads/{{ Auth::user()->userImg }}'>
+                            <img style='max-height:45px;margin-right:10px;' class='img-fluid rounded-circle' src='img/profile_image.png'>
                             <div style="padding-right: 10px;">
-                            <span>Hello, {{ Auth::user()->name }}</span>
+                            <span>Hello, {{ Auth::user()->username }}</span>
                             <br>
                             <span style='font-size:14px;font-weight:400;padding-right: 35px;'>
                             {{ Auth::user()->email }}</span>
@@ -55,16 +55,7 @@
                         </a>
                         <div class="dropdown-divider"></div>
                         <a href="/home" class="dropdown-item"> <i class="material-icons md-18">home</i> <span>Home</span> </a>
-                        <a href="/" class="dropdown-item"> <i class="material-icons md-18">book</i> <span>Book Rooms</span> </a>
-                        <a href="#" class="dropdown-item"> <i class="material-icons md-18">home</i> <span>Pending Bookings</span> </a>
-                        <a href="/admin/dashboard" class="dropdown-item"> <i class="material-icons md-18">dashboard</i> <span>Room Panel</span> </a>
-
-
-
-
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <i class="material-icons">exit_to_app</i>
                             <span class="mt-aside">{{ __('Logout') }}</span>
                         </a>
